@@ -1,0 +1,55 @@
+/* app css stylesheet */
+
+body {
+  padding-top: 20px;
+}
+
+.patients {
+  list-style: none;
+}
+
+.patients li {
+  clear: both;
+  height: 115px;
+  padding-top: 15px;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 5px;
+  margin-bottom: 4px;
+  border-radius: 10px;
+}
+
+.patients label {
+  margin-top: 8px;
+}
+
+.patients .col-sm-2{
+  width: 12%;
+}
+
+h1 {
+  border-bottom: 1px solid gray;
+}
+
+
+.form-control {
+  width: 200px;
+}
+
+.selectOrder{
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    margin-bottom: 3px;
+}
+
+.form-horizontal{
+  margin-left: 30%;
+  margin-right: 25%;
+  margin-top: 5%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

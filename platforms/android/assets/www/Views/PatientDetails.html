@@ -1,0 +1,23 @@
+
+<header class="action-bar">
+	<a class="app-icon action up" ng-click='backApp()'>
+	  <i class="icon-up-button"></i>
+	  <i class="icon-gdg"></i>
+	</a>
+	<h1 class="title">Patient Detail</h1>
+</header>
+
+<div class="content">
+	<div class="app-content">
+	    <ul>
+			<li id="speaker">
+	          <div class='speaker-info'>
+	            <h3> Patient Name: {{patient.FirstName}} {{patient.LastName}}</h3>
+	            <h3> Phone number: {{patient.PhoneNo}}</h3>
+	            <h3> Last visit Date: {{patient.lastVisitDate}}</h3>
+	           </div>
+	         </li>
+        </ul>
+	</div>
+</div>
+
