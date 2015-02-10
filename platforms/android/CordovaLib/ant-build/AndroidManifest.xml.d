@@ -1,2 +1,2 @@
-/Users/marloncasagranda/HealhPatients/platforms/android/CordovaLib/ant-build/AndroidManifest.xml : \
-/Users/marloncasagranda/HealhPatients/platforms/android/CordovaLib/AndroidManifest.xml \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/CordovaLib/ant-build/AndroidManifest.xml : \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/CordovaLib/AndroidManifest.xml \

@@ -1,32 +1,20 @@
 
 
-<header class="action-bar">
-  <a class="app-icon action">
-    <i class="icon-gdg"></i>
-  </a>
-  <h1 class="title">Patients</h1>
+<header class="bar bar-nav">
+
+  <button class="btn pull-left" onclick="location.href='#/patients/0'">
+     Create new</button>
+  <h1 class="title">List of patients</h1>
 </header>
+<br><br>
+<ul class="table-view">
+  <li class="table-view-cell" ng-repeat="patient in patients">
+    <a href="#/patients/{{patient.PatientId}}" class="navigate-right">
+      {{patient.FirstName}} {{patient.LastName}}
+    </a>
+  </li>
+</us>
 
-<nav class="tab-fixed">
-  <ul class="tab-inner">
-    <li class='active' ><a href="#/patients"><i class="icon-group"></i></a></li>
-  </ul>
-</nav>
 
-<div class="content">
-  <div class="app-content">
-    <ul>
-          <li id="people" class="tab-item active">
-            <ul class="list inset">
-              <li class="list-item-multi-line selectable" ng-repeat="patient in patients">
-                <a href="#/patients/{{patient.PatientId}}">
-                  <h4>{{patient.FirstName}} - {{patient.LastName}}</h4>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-  </div>
-</div>
 
 

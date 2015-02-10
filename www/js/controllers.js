@@ -4,6 +4,8 @@
 
 var patientControllers = angular.module('patientControllers', []);
 
+
+
 var wholeData = [];//Array that simulates my database
 
 //Set the list of patients into the array
@@ -29,6 +31,8 @@ var getById = function(id) {
 	var arr = GetArray();
 	for (var d = 0; d < arr.length; d += 1) {
     	if (arr[d].PatientId == id) {
+
+            arr[d].lastVisitDate = new Date(arr[d].lastVisitDate);
         	return arr[d];
     	}
 	}
@@ -47,12 +51,14 @@ var findMaxId = function(){
 //Controller for Patientlist
 patientControllers.controller('PatientListCtrl', ['$scope','$http', function($scope, $http){
     $scope.orderProp = 'LastName';//Set the property for sort
-  	//If there is nothing  into the array, get from Patient.Json,
+
+    //If there is nothing  into the array, get from Patient.Json,
     //otherwise get from my parient's array
     if(GetArray().length == 0){
       	$http.get('Data/Patient.json').success(function(data){
             $scope.patients = data;
             setArray(data);
+            console.log(data);
         });
     }
     else
@@ -64,10 +70,25 @@ patientControllers.controller('PatientDetailCtrl', ['$window', '$scope', '$route
   function($window,$scope, $routeParams) {
   //Get a specific Patient 
     $scope.patient = getById($routeParams.PatientId);
+     
   //Reset the form
     $scope.reset = function(){
   		this.patient = {};
     }
+
+    $scope.delete = function(id){
+        remove(GetArray(), id);
+        $window.alert("Successful operation");
+        $window.history.back();
+    }
+
+    function remove(arr, item) {
+      for(var i = arr.length; i--;) {
+          if(arr[i].PatientId === item) {
+              arr.splice(i, 1);
+          }
+      }
+  }
 
     $scope.backApp = function() {
         $window.history.back();

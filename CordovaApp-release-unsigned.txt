@@ -1,0 +1,5 @@
+CordovaApp-release-unsigned.apk
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore CordovaApp-release-unsigned.apk alias_name
+
+zipalign -v 4 CordovaApp-release-unsigned.apk HelloWorld.apk

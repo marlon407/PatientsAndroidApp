@@ -1,2 +1,2 @@
-/Users/marloncasagranda/HealhPatients/platforms/android/ant-build/AndroidManifest.xml : \
-/Users/marloncasagranda/HealhPatients/platforms/android/AndroidManifest.xml \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/ant-build/AndroidManifest.xml : \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/AndroidManifest.xml \

@@ -3,16 +3,15 @@
 /* App Module */
 
 var app = angular.module('Patient', [
-  'ngRoute', //routes
+  'ionic',
+  'ngRoute', 
+  'services',
   'patientControllers'//Adding the controllers
 ]);
 
 
-app.controller('MainController', function($scope) {
-  $scope.name = "Ari";
-  $scope.sayHello = function() {
-    $scope.greeting = "Hello " + $scope.name;
-  }
+app.run(function(DB) {
+    DB.init();
 })
 
 //Providing routes for the whole applicarion so far
