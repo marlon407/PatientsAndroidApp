@@ -5,12 +5,12 @@ angular.module('config', [])
       {
             name: 'Patients',
             columns: [
-                {name: 'PatientId', type: 'integer primary key'},
+                {name: 'PatientId', type: 'integer primary key  '},
                 {name: 'FirstName', type: 'text'},
                 {name: 'LastName', type: 'text'},
                 {name: 'PhoneNo', type: 'integer'},
                 {name: 'lastVisitDate', type: 'text'},
-                {name: 'filename', type: 'bool'}
+                {name: 'status', type: 'boolean'}
             ]
         }
     ]

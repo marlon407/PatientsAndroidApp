@@ -1,76 +1,76 @@
 
 
-angular.module('services', ['config'])
+angular.module('services', [])
 // DB wrapper
-.factory('DB', function($q, DB_CONFIG) {
-    var self = this;
-    self.db = null;
+.factory('DBA', function($cordovaSQLite) {
+  var self = this;
  
-    self.init = function() {
-        // Use self.db = window.sqlitePlugin.openDatabase({name: DB_CONFIG.name}); in production
-        self.db = window.openDatabase(DB_CONFIG.name, '1.0', 'database', -1);
+  // Handle query's and potential errors
+  self.query = function(query, parameters) {
+    return $cordovaSQLite.execute(db, query, parameters)
+      .then(function(result) {
+        return result;
+      }, function (error) {
+        console.log('I found an error');
+        console.log(error);
+        return error;
+      });
+  }
  
-        angular.forEach(DB_CONFIG.tables, function(table) {
-            var columns = [];
+  // Proces a result set
+  self.getAll = function(result) {
+    var output = [];
  
-            angular.forEach(table.columns, function(column) {
-                columns.push(column.name + ' ' + column.type);
-            });
+    for (var i = 0; i < result.rows.length; i++) {
+      output.push(result.rows.item(i));
+    }
+    return output;
+  }
  
-            var query = 'CREATE TABLE IF NOT EXISTS ' + table.name + ' (' + columns.join(',') + ')';
-            self.query(query);
-            console.log('Table ' + table.name + ' initialized');
-        });
-    };
+  // Proces a single result
+  self.getById = function(result) {
+    var output = null;
+    output = angular.copy(result.rows.item(0));
+    return output;
+  }
  
-    self.query = function(query, bindings) {
-        bindings = typeof bindings !== 'undefined' ? bindings : [];
-        var deferred = $q.defer();
- 
-        self.db.transaction(function(transaction) {
-            transaction.executeSql(query, bindings, function(transaction, result) {
-                deferred.resolve(result);
-            }, function(transaction, error) {
-                deferred.reject(error);
-            });
-        });
- 
-        return deferred.promise;
-    };
- 
-    self.fetchAll = function(result) {
-        var output = [];
- 
-        for (var i = 0; i < result.rows.length; i++) {
-            output.push(result.rows.item(i));
-        }
-        
-        return output;
-    };
- 
-    self.fetch = function(result) {
-        return result.rows.item(0);
-    };
- 
-    return self;
+  return self;
 })
+
 // Resource service example
-.factory('Document', function(DB) {
+.factory('MyApp', function($cordovaSQLite, DBA) {
     var self = this;
+    debugger;
     
     self.all = function() {
-        return DB.query('SELECT * FROM documents')
+        return DBA.query('SELECT * FROM Patients')
         .then(function(result){
-            return DB.fetchAll(result);
-        });
+        	return DBA.getAll(result);
+      });
     };
+
+    self.save =function(patient){
+    	return DBA.query('insert into Patients (FirstName, LastName, PhoneNo, lastVisitDate, status) values (?,?,?,?,?)', 
+    		[patient.FirstName, patient.LastName, patient.PhoneNo, patient.lastVisitDate, patient.status]);
+    }
     
     self.getById = function(id) {
-        return DB.query('SELECT * FROM documents WHERE id = ?', [id])
-        .then(function(result){
-            return DB.fetch(result);
-        });
+    	var parameters = [id];
+        return DBA.query('SELECT * FROM Patients WHERE PatientId = ?', parameters)
+        .then(function(result) {
+        	return DBA.getById(result);
+      });
     };
+
+    self.update = function(patient) {
+	    var parameters = [patient.FirstName, patient.LastName, patient.PhoneNo, patient.lastVisitDate, patient.status, patient.PatientId];
+	    return DBA.query("UPDATE Patients SET FirstName = (?), LastName = (?), PhoneNo = (?), lastVisitDate = (?), status = (?)  WHERE PatientId = (?)", parameters);
+  	}
+
+ 	self.remove = function(id) {
+    	var parameters = [id];
+    	return DBA.query("DELETE FROM Patients WHERE PatientId = (?)", parameters);
+ 	}
     
     return self;
 });

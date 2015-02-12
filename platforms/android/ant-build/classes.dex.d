@@ -11,4 +11,10 @@
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/ant-build/classes/com/ionicframework/healhpatients766985/R$xml.class \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/ant-build/classes/com/ionicframework/healhpatients766985/R.class \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/ant-build/classes/org/apache/cordova/device/Device.class \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/ant-build/classes/org/pgsqlite/SQLitePlugin$1.class \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/ant-build/classes/org/pgsqlite/SQLitePlugin$Action.class \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/ant-build/classes/org/pgsqlite/SQLitePlugin$DBQuery.class \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/ant-build/classes/org/pgsqlite/SQLitePlugin$DBRunner.class \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/ant-build/classes/org/pgsqlite/SQLitePlugin$QueryType.class \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/ant-build/classes/org/pgsqlite/SQLitePlugin.class \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/ant-build/dexedLibs/classes-b59f2acfe791f6bb4d95ee2ddfca56bc.jar \

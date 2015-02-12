@@ -1,0 +1,20 @@
+
+
+<header class="bar bar-nav">
+
+  <button class="btn pull-left" onclick="location.href='#/patients/0'">
+     Create new</button>
+  <h1 class="title">List of patients</h1>
+</header>
+<br><br>
+<ul class="table-view">
+  <li class="table-view-cell" ng-repeat="patient in patients">
+    <a href="#/patients/{{patient.PatientId}}" class="navigate-right">
+      {{patient.FirstName}} {{patient.LastName}}
+    </a>
+  </li>
+</us>
+
+
+
+

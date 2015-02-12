@@ -1,0 +1,30 @@
+
+<header class="bar bar-nav">
+  <button ng-click="backApp()" class="btn pull-left">
+    Back
+  </button>
+  <span ng-click="delete(patient.PatientId)" class="icon icon-trash pull-right"></span>
+  <h1 class="title">Patient details</h1>
+</header>
+<br><br>
+<form class="input-group">
+  <div class="input-row">
+    <label>First name</label>
+    <input type="text" placeholder="Marlon" ng-model="patient.FirstName">
+  </div>
+  <div class="input-row">
+    <label>Last name</label>
+    <input type="text" placeholder="Diego" ng-model="patient.LastName">
+  </div>
+  <div class="input-row">
+    <label>Phone number</label>
+    <input type="text" id="phoneNumber" placeholder="(111)111 2222" ng-model="patient.PhoneNo">
+  </div>
+  <div class="input-row">
+    <label>Last visit Date</label>
+    <input type="date"  ng-model="patient.lastVisitDate" placeholder="goRatchet">
+  </div>
+<br>
+  <button ng-click="update(patient)" class="btn btn-positive btn-block">Save patient</button>
+  <button ng-click="reset()" class="btn btn-positive btn-block">Clean</button>
+</form>

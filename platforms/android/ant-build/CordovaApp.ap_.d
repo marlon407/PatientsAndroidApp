@@ -53,6 +53,7 @@
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/js/app.js \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/js/config.js \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/js/controllers.js \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/js/ng-cordova.min.js \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/js/ratchet.js \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/js/services.js \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/lib/bower_components \
@@ -431,8 +432,11 @@
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/lib/ionic/js/angular/angular.min.js \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/lib/ionic/js/angular-ui/angular-ui-router.js \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/lib/ionic/js/angular-ui/angular-ui-router.min.js \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/plugins/com.brodysoft.sqlitePlugin \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/plugins/com.ionic.keyboard \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/plugins/org.apache.cordova.device \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/plugins/com.brodysoft.sqlitePlugin/www \
+/Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/plugins/com.brodysoft.sqlitePlugin/www/SQLitePlugin.js \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/plugins/com.ionic.keyboard/www \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/plugins/com.ionic.keyboard/www/keyboard.js \
 /Users/marloncasagranda/PatientsAndroidApp/platforms/android/assets/www/plugins/org.apache.cordova.device/www \

@@ -1,0 +1,10 @@
+2015-02-11 15:16:29.995 HealhPatients[9422:392443] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/marloncasagranda/Library/Developer/CoreSimulator/Devices/41E5A290-D959-4828-BFFD-24137226F37D/data/Containers/Data/Application/355DD62D-5230-4994-B578-ED45093FC4F0/Library/Cookies/Cookies.binarycookies
+2015-02-11 15:16:30.428 HealhPatients[9422:392443] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-11 15:16:30.429 HealhPatients[9422:392443] Multi-tasking -> Device: YES, App: YES
+2015-02-11 15:16:30.448 HealhPatients[9422:392443] Unlimited access to network resources
+2015-02-11 15:16:30.896 HealhPatients[9422:392443] [CDVTimer][keyboard] 0.540972ms
+2015-02-11 15:16:30.896 HealhPatients[9422:392443] [CDVTimer][TotalPluginStartup] 0.925004ms
+2015-02-11 15:16:31.547 HealhPatients[9422:392443] Resetting plugins due to page load.
+2015-02-11 15:16:31.945 HealhPatients[9422:392443] Finished load of: file:///Users/marloncasagranda/Library/Developer/CoreSimulator/Devices/41E5A290-D959-4828-BFFD-24137226F37D/data/Containers/Bundle/Application/F594D8B4-510F-4636-B5DA-9138B6C374A5/HealhPatients.app/www/index.html#/patients
+2015-02-11 15:17:31.111 HealhPatients[9422:392443] Resetting plugins due to page load.
+2015-02-11 15:17:31.190 HealhPatients[9422:392443] Finished load of: file:///Users/marloncasagranda/Library/Developer/CoreSimulator/Devices/41E5A290-D959-4828-BFFD-24137226F37D/data/Containers/Bundle/Application/F594D8B4-510F-4636-B5DA-9138B6C374A5/HealhPatients.app/www/index.html?#/patients/0
