@@ -1,5 +1,5 @@
 # PatientsAndroidApp
-A single-page application where ready a .Json file with some Patients informations and show it in a list.
+A single-page application where read a .Json file with some Patients informations and show it in a list.
 
 First install Cordova:
   sudo npm install -g cordova
